@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!--  <link rel="icon" href="./imagens/mercomoney_logo.png" type="imagem/png"> -->
+
+  <title> SeuPomodoro </title>
+
+  <meta name="author" content="Francisco Messias C Assunção" />
+  <meta
+    name="description"
+    content="Tomato Timer is a flexible and easy-to-use online Pomodoro technique timer. Boost your productivity with Tomato Timer."
+  />
+  <meta
+    name="keywords"
+    content="pomodoro technique, tomato timer, pomodoro timer, online pomodoro timer, software timer, pomodoro software timer, productivity tools, gtd, getting things done, productivity, digital timer, concentration techniques, pomodoro resources, pomodoro software"
+  />
+
+  <link rel="stylesheet" href="./style.css"/>
+
+</head>
+<body>
+
+<div class="wrapper">
+  <div id="player">
+    <div class="card">
+      <div class="card-content">
+        <h5>Title</h5>
+        <p class="artist">Artist</p>
+        <a href="#" class="btn-floating btn-large halfway-fab">
+          <i class="material-icons" id="play-pause">play_arrow</i>
+        </a>
+        
+        <div class="row valign-wrapper">
+          <div class="col s2" id="current-duration">00:00</div>
+          <div class="col s6 range-field valign-wrapper">
+            <input type="range" min="0" max="0" id="seekbar" step="1" />
+          </div>
+          <div class="col s2" id="total-duration">00:00</div>
+          <div>
+            <a href="#">
+              <i class="material-icons" id="mute">volume_up</i>
+            </a>
+          </div>
+          <div class="col s3 range-field valign-wrapper">
+            <input id="vol-control" type="range" min="0" max="100" step="1" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper">
+  <div id="pomodoro">
+
+    <!-- <img src="../files/clock.svg" alt="clock"> -->
+
+    <h1 id="counter">
+      00:00:00
+    </h1>
+
+    <div class="content">
+
+      <div class="column">
+        <select class="browser-default">
+          <option value="Hour" selected disabled hidden>Hour</option>
+        </select>
+      </div>
+
+      <div class="column">
+        <select class="browser-default">
+          <option value="Minute" selected disabled hidden>Minute</option>
+        </select>
+      </div>
+
+      <div class="column">
+        <select class="browser-default">
+          <option value="Seconds" selected disabled hidden>Second</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div id="buttons-control">
+      <button id="setAlarm" name="start" onclick="start()">
+      Start
+      </button>
+
+      <button 
+      type="button" 
+      name="pause"
+      onclick="pause()">
+      pause
+    </button>
+
+      <button 
+      type="button" 
+      name="stop"
+      onclick="stop()">
+        stop
+      </button>
+
+    </div>
+
+    <div id="sugestion">
+      <ul>  
+        <li> We recommend used 45 minutes to study and 10 minutes to relaxing </li>
+        <li> Nós recomendamos usar 45 minutos para estudos e 10 minutos para descanço </li>
+      </ul>
+    </div>
+
+</div>
+
+<script src="./musicMain.js" type="module"></script>
+<script src="./pomodoroMain.js" defer></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+
+</body>
+</html>
