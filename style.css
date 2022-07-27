@@ -50,8 +50,8 @@ body {
   padding-block: 3rem;
 }
 
-.wrapper-2 {
-  width: min(50rem, 80%);
+.wrapper_2 {
+  width: max(30rem, 70%);
   margin-inline: auto;
   padding-block: 3rem;
 }
