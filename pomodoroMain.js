@@ -92,7 +92,7 @@ for (let i = 59; i >= 0; i--) {
       content.classList.remove("disable");
       stop();
       setAlarmBtn.innerText = "Start";
-      
+      alert("You win, congratulations!");
       return isAlarmSet = false;
     }
     

@@ -1,4 +1,4 @@
-import player from './playerMusic.js'
+import player from '../playerControlJs/playerMusic.js'
 
 /* const path = function(file) {
   return `files/${file}`
