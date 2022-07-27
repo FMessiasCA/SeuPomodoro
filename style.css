@@ -40,13 +40,18 @@ body {
 }
 
 #body {
-  height: 105vh;
+  height: 110vh;
   background-color: #efefef;
 }
 
-
 .wrapper {
   width: min(30rem, 100%);
+  margin-inline: auto;
+  padding-block: 3rem;
+}
+
+.wrapper-2 {
+  width: min(50rem, 80%);
   margin-inline: auto;
   padding-block: 3rem;
 }
