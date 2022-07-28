@@ -51,7 +51,7 @@ body {
 }
 
 .wrapper_2 {
-  width: max(70%, 20.4rem);
+  width: 70%;
   margin-inline: auto;
   padding-block: 3rem;
 }
