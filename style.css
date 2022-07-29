@@ -47,7 +47,7 @@ body {
 }
 
 .wrapper {
-  width: min(40rem, 100%);
+  width: min(35rem, 100%);
   margin-inline: auto;
   padding-block: 1.7rem;
 }
@@ -64,8 +64,6 @@ body {
   display: flex;
   justify-content: space-between;
   padding-block: 3.7rem 1.7rem;
-
-  
 }
 
 /* *** DARK AND LIGHT MODE *** */
