@@ -58,7 +58,17 @@ body {
   padding-block: 3rem;
 }
 
-/* *** ----- *** DARK AND LIGHT MODE *** ----- *** */
+/* *** ----- *** NAVIGATION *** ----- *** */
+
+#body #nav-control {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 3.7rem 1.7rem;
+
+  
+}
+
+/* *** DARK AND LIGHT MODE *** */
 
 #toggle {
   position: relative; 
@@ -103,12 +113,39 @@ body {
               inset 0 -4px 8px rgba(255,255,255,0.2);
 }
 
+#body #nav-control button#fullscreen i#screen.active {
+  color: var(--light);
+}
+
 #body.active {
   background-color: var(--dark);
 }
 
 #body-2.active {
-  background: linear-gradient( -180deg, #050505 30%, var(--dark) 70%);
+  background: linear-gradient( 120deg, #050505 30%, var(--dark) 80%);
+}
+
+footer.wrapper_2#copyright.active p {
+  color: var(--light);
+}
+
+/* *** FULL SCREEN *** */
+
+#body #nav-control button#fullscreen{
+  background: none;
+  border: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#body #nav-control button#fullscreen i.material-icons {
+  color: var(--primary);
+  font-size: 3.7rem;
+}
+
+#body #nav-control button#fullscreen i.material-icons:hover {
+  transform:scale(1.3);
+  transition: 0.5s;
 }
 
 /* *** ----- *** PLAYER *** ----- *** */
@@ -219,6 +256,7 @@ body {
   outline: none;
   background: none;
   font-size: 1.7rem;
+  cursor: pointer;
 }
 
 #pomodoro button{
@@ -257,7 +295,7 @@ body {
   position: relative;
 }
 
-#body-2 article.about h1#title {
+#body-2 article.about h2 {
   color: black/* var(--primary) */;
   font-size: 1.5rem;
   font-weight: bold;
@@ -285,7 +323,7 @@ body {
 
 /* *** FOOTER *** */
 
-footer.wrapper_2 p#copyright {
+footer.wrapper_2#copyright p {
   font-size: 1.7rem;
   text-align: center;
   color: var(--primary);

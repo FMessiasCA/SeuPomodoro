@@ -84,7 +84,7 @@ for (let i = 59; i >= 0; i--) {
   }
   
   /* DETERMINANDO O TEMPO DE CONTAGEM */
-  
+   
   function setAlarm() {
     if (isAlarmSet) {
       alarmTime = "";
