@@ -42,20 +42,27 @@ body {
 }
 
 #body {
-  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  
+  height: 100vh;
   background-color: #efefef;
+}  
+
+#body #pomodoro {
+  height: 45 vh;
 }
 
 .wrapper {
   width: min(35rem, 100%);
   margin-inline: auto;
-  padding-block: 1.7rem;
 }
 
 .wrapper_2 {
   width: 70%;
   margin-inline: auto;
-  padding-block: 3rem;
+  padding-block: 3vh;
 }
 
 /* *** ----- *** NAVIGATION *** ----- *** */
@@ -63,7 +70,6 @@ body {
 #body #nav-control {
   display: flex;
   justify-content: space-between;
-  padding-block: 3.7rem 1.7rem;
 }
 
 /* *** DARK AND LIGHT MODE *** */
@@ -150,7 +156,6 @@ footer.wrapper_2#copyright.active p {
 
 #player {
   background-color: var(--light);
-  width: 100%;
   border-radius: 5px;
   box-shadow: var(--box-shadow);
 }
@@ -172,7 +177,6 @@ footer.wrapper_2#copyright.active p {
 } */
 
 #player audio {
-  width: 100%;
   margin-top: 3rem;
 }
 
@@ -209,7 +213,6 @@ footer.wrapper_2#copyright.active p {
 }
 
 #pomodoro {
-  width: 100%;
   padding: 1rem 2.5rem 1rem;
   background: var(--light);
   border-radius: 5px;
@@ -328,4 +331,27 @@ footer.wrapper_2#copyright p, a {
   font-weight: bold;
 
   padding-bottom: 1rem;
+}
+
+/* *** ----- *** RESPONSIVE *** ----- *** */
+
+ @media (min-width: 1024px) {
+
+  /* *** GERAL *** */
+
+  body{
+    overflow: auto;
+  }
+
+  #body .wrapper {
+    width: min(50rem, 100%);
+  }
+
+  #body-2 .wrapper_2 {
+    width: 60%;
+    padding-block: 3vh;
+  }
+
+  /* *** NAVIGATION *** */
+
 }
