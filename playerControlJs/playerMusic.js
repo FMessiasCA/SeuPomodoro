@@ -62,5 +62,5 @@ export default {
   restart(){
     this.currentPlaying = 0;
     this.update();
-  }
+  },
 };

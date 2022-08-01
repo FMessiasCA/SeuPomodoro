@@ -176,13 +176,9 @@ footer.wrapper_2#copyright.active p {
   padding: 1.2rem;
 } */
 
-#player audio {
-  margin-top: 3rem;
-}
-
-#player #play-pause {
+/* #player #play-pause {
   background-color: var(--primary);
-}
+} */
 
 #player #mute {
   color: var(--primary);
@@ -203,6 +199,11 @@ footer.wrapper_2#copyright.active p {
   background-color: var(--primary);
 }
 /* para a microsoft */
+
+#player #before_or_after {
+  display: flex;
+  justify-content: space-between;
+}
 
 /* *** ----- *** POMODORO *** ----- *** */
 
@@ -290,6 +291,10 @@ footer.wrapper_2#copyright.active p {
 
 /* *** ----- *** SECOND BODY *** ----- *** */
 
+#body-2 {
+  background-color: #f6f8f8;
+}
+
 /* *** ABOUT POMODORO *** */
 
 #body-2 article.about .box-text {
@@ -347,11 +352,36 @@ footer.wrapper_2#copyright p, a {
     width: min(50rem, 100%);
   }
 
+  #player .card-content h5 {
+    font-size: 2.3rem;
+  }
+
+  #player .card-content p.artist {
+    font-size: 1.3rem;
+  }
+  
+  #pomodoro h1#counter {
+    padding-block: 0.5rem;
+    font-size: 7rem;
+    margin: 0;
+  }
+
   #body-2 .wrapper_2 {
     width: 60%;
     padding-block: 3vh;
   }
 
-  /* *** NAVIGATION *** */
+  /* *** ABOUT POMODORO *** */
+
+  #body-2 article.about h1 {
+    font-size: 2.3rem;
+
+    padding: 0.7rem 5rem;
+    top: -17px;
+  }
+
+  #body-2 article.about p {
+    font-size: 1.8rem;
+  }
 
 }

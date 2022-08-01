@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" href="./files/3586375-clock-hour-timer-watch_107942.ico" type="ico">
-
+  <!-- <link rel="icon" href="./files/3586375-clock-hour-timer-watch_107942.ico" type="ico">
+ -->
   <title> SeuPomodoro </title>
 
   <meta name="author" content="Francisco Messias C Assunção" />
@@ -45,9 +45,6 @@
       <div class="card-content">
         <h5>Title</h5>
         <p class="artist">Artist</p>
-        <a href="#" class="btn-floating btn-large halfway-fab">
-          <i class="material-icons" id="play-pause">play_arrow</i>
-        </a>
         
         <div class="row valign-wrapper">
           <div class="col s2" id="current-duration">00:00</div>
@@ -64,6 +61,28 @@
             <input id="vol-control" type="range" min="0" max="100" step="1" />
           </div>
         </div>
+
+
+
+
+        <div id="before_or_after">
+          <a href="#">
+            <i class="material-icons" id="button_before">navigate_before</i>
+          </a>
+
+          <a href="#">
+            <i class="material-icons" id="play-pause">play_arrow</i>
+          </a>
+
+          <a href="#">
+            <i class="material-icons" id="button_after">navigate_next</i>
+          </a>
+        </div>
+
+
+
+
+
       </div>
     </div>
   </div>
@@ -168,10 +187,9 @@
 
 <!-- Jesus, I need help with this :) -->
 
-<script src="./scriptsMains/pomodoroMain.js" defer></script>
+<script src="./scriptsMains/control_details.js" defer></script>
 <script src="./scriptsMains/musicMain.js" type="module" defer></script>
-<script src="./scriptsMains/darkOrLight.js" defer></script>
-<script src="./scriptsMains/fullscreentoggle.js" defer></script>
+<script src="./scriptsMains/pomodoroMain.js" defer></script>
 
 <script src="https://unpkg.com/scrollreveal"></script>
 
