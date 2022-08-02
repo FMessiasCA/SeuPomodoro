@@ -13,7 +13,6 @@
 }
 
 :root {
-
   font-size: 62.5%; /* 1rem = 10px */
 
   --primary: #7159C1;
@@ -48,15 +47,19 @@ body {
   
   height: 100vh;
   background-color: #efefef;
-}  
-
-#body #pomodoro {
-  height: 45 vh;
-}
+} 
 
 .wrapper {
   width: min(35rem, 100%);
   margin-inline: auto;
+}
+
+#body .col-a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  gap: 3vh;
 }
 
 .wrapper_2 {
@@ -348,10 +351,17 @@ footer.wrapper_2#copyright p, a {
     overflow: auto;
   }
 
+  #body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    place-content: center space-between;
+  }
+
   #body .wrapper {
     width: min(50rem, 100%);
   }
-
+  
   #player .card-content h5 {
     font-size: 2.3rem;
   }
@@ -368,7 +378,6 @@ footer.wrapper_2#copyright p, a {
 
   #body-2 .wrapper_2 {
     width: 60%;
-    padding-block: 3vh;
   }
 
   /* *** ABOUT POMODORO *** */
