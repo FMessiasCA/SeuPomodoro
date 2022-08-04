@@ -30,107 +30,89 @@
 <section id="body">
 
 
-<div class="wrapper" id="nav-control">   
+<div class="wrapper" id="nav-control">  
+
+  <!-- dark or light -->
   <div id="toggle">
     <i class="indicator"></i>
   </div>
 
+  <!-- button open and close music -->
+  <button
+    aria-expanded="false"
+    aria-label="Abrir música"
+    onclick="openMusic()"
+  >
+    <i id="openMusic" class="material-icons">music_note</i>
+  </button>
+
+  <!-- button fullscreen -->
   <button id="fullscreen">
     <i class="material-icons" id="screen">fullscreen</i>
   </button>
 </div>
 
-
-
-
 <div id="important">
   
 <div class="wrapper">
-  <!-- button open and close -->
-  <button
-  aria-expanded="false"
-  aria-label="Abrir música"
-  onclick="openMusic()"
-  >
-  <i id="openMusic" class="material-icons">music_note</i>
-  </button>
-
-<div id="player">        
-
-  <!-- Title, Artist, Duration, ETC -->
-  <div id="card">
-    <div class="card-content">
-      <h5>Title</h5>
-      <p class="artist">Artist</p>
-
-      <div class="row valign-wrapper" id="player-controls">
-        <div class="col s2" id="current-duration">00:00</div>
-        <div class="col s6 range-field valign-wrapper">
-          <input type="range" min="0" max="0" id="seekbar" step="1" />
-        </div>
-        <div class="col s2" id="total-duration">00:00</div>
-        <div>
-          <a href="#">
-            <i class="material-icons" id="volume-icon">volume_up</i>
-          </a>
-        </div>
-        <div class="col s3 range-field valign-wrapper" id="volume">
-          <input
-            type="range"
-            min="0"
-            max="100"
-            id="volume-control"
-            step="1"
-          />
-        </div>
-      </div>
-    </div> <!-- card content -->
-
-
-    <!-- buttons previous, play/stop and next -->
-    <div class="change-tracks">
-      <a href="#" id="previous-track">
-        <i class="material-icons">skip_previous</i>
-      </a>
-
-      <a href="#">
-        <i class="material-icons" id="play-pause">play_arrow</i>
-      </a>
-
-      <a href="#" id="next-track">
-        <i class="material-icons">skip_next</i>
-      </a>
-    </div>
-
-  </div> <!-- .card -->
-
-</div> <!-- #player -->
-
-
-
   
-</div>
+  <div id="player">        
+
+    <!-- Title, Artist, Duration, ETC -->
+    <div id="card">
+      <div class="card-content">
+        <h5>Title</h5>
+        <p class="artist">Artist</p>
+
+        <div class="row valign-wrapper" id="player-controls">
+          <div class="col s2" id="current-duration">00:00</div>
+          <div class="col s6 range-field valign-wrapper">
+            <input type="range" min="0" max="0" id="seekbar" step="1" />
+          </div>
+          <div class="col s2" id="total-duration">00:00</div>
+          <div>
+            <a href="#">
+              <i class="material-icons" id="volume-icon">volume_up</i>
+            </a>
+          </div>
+          <div class="col s3 range-field valign-wrapper" id="volume">
+            <input
+              type="range"
+              min="0"
+              max="100"
+              id="volume-control"
+              step="1"
+            />
+          </div>
+        </div>
+      </div> <!-- card content -->
 
 
+      <!-- buttons previous, play/stop and next -->
+      <div class="change-tracks">
+        <a href="#" id="previous-track">
+          <i class="material-icons">skip_previous</i>
+        </a>
 
+        <a href="#">
+          <i class="material-icons" id="play-pause">play_arrow</i>
+        </a>
 
+        <a href="#" id="next-track">
+          <i class="material-icons">skip_next</i>
+        </a>
+      </div>
 
+    </div> <!-- .card -->
 
+  </div> <!-- #player -->
 
-
-
-
-
-
-
-
+</div> <!-- wrapper -->
 
 
 
 <div class="wrapper">
   <div id="pomodoro">
-
-    <!-- <img src="../files/clock.svg" alt="clock"> -->
 
     <h1 id="counter">
       00:00:00
@@ -160,21 +142,21 @@
 
     <div id="buttons-control">
       <button id="setAlarm" name="start">
-      Start
+        Start
       </button>
 
       <button 
       type="button" 
       name="pause"
       onclick="pause()">
-      pause
-    </button>
+        Pause
+      </button>
 
       <button 
       type="button" 
       name="stop"
       onclick="stop()">
-        stop
+        Stop
       </button>
 
     </div>
@@ -184,12 +166,13 @@
         We recommend used 45 minutes to study and 10 minutes to relaxing
       </p>
       <p>
-        We recommend used 45 minutes to study and 10 minutes to relaxing
+        Nós recomendamos uso de 45 minutos para estudos e 10 minutos para descanso.
       </p>
       
     </div>
 
-</div>
+  </div> <!-- pomodoro -->
+</div> <!-- wrapper -->
 
 </div> <!-- important -->
 
@@ -202,21 +185,39 @@
       <div class="box-text">
         <h1> What is Pomodoro?</h1>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam earum ducimus voluptates odit ratione mollitia aut sint! Vero qui quis fugit cumque dignissimos quaerat aspernatur accusantium asperiores natus. Sint iure error nobis eveniet iste repudiandae eius mollitia hic saepe laudantium recusandae quod numquam earum consequatur excepturi, distinctio fugiat eaque aut eos, blanditiis porro? Ullam accusantium, exercitationem culpa, aperiam quasi consectetur magnam unde magni in distinctio libero veritatis qui delectus! Pariatur autem perferendis id velit. Natus numquam hic consequatur cupiditate molestias soluta, accusamus laudantium fuga et quo quis nostrum ipsa provident in error sint officia nulla nam tenetur odit saepe? Incidunt?
+          In this place, I'll put some things about Pomodoro and search about studies. So, now I'm write anything word just for complete 3 or 4 lines. Yes, I speak english like a Native or like your english teacher.
+        </p>
+
+        <hr>
+
+        <p>
+         Essa parte fica o Pomodoro em português. Vou adicionando coisas para aumentar o conteúdo só para saber como fica. Um homem, uma máquina, uma besta enjaulada com ódio... Cristiano Ronaldo.
         </p>
       </div>
 
       <div class="box-text">
         <h1> What are the benefits for me?</h1>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam earum ducimus voluptates odit ratione mollitia aut sint! Vero qui quis fugit cumque dignissimos quaerat aspernatur accusantium asperiores natus. Sint iure error nobis eveniet iste repudiandae eius mollitia hic saepe laudantium recusandae quod numquam earum consequatur excepturi, distinctio fugiat eaque aut eos, blanditiis porro? Ullam accusantium, exercitationem culpa, aperiam quasi consectetur magnam unde magni in distinctio libero veritatis qui delectus! Pariatur autem perferendis id velit. Natus numquam hic consequatur cupiditate molestias soluta, accusamus laudantium fuga et quo quis nostrum ipsa provident in error sint officia nulla nam tenetur odit saepe? Incidunt?
+          In this place, I'll put some things about Pomodoro and search about studies. So, now I'm write anything word just for complete 3 or 4 lines. Yes, I speak english like a Native or like your english teacher.
+        </p>
+
+        <hr>
+
+        <p>
+         Essa parte fica o Pomodoro em português. Vou adicionando coisas para aumentar o conteúdo só para saber como fica. Um homem, uma máquina, uma besta enjaulada com ódio... Cristiano Ronaldo.
         </p>
       </div>
 
       <div class="box-text">
         <h1> Why using this pomodoro?</h1>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam earum ducimus voluptates odit ratione mollitia aut sint! Vero qui quis fugit cumque dignissimos quaerat aspernatur accusantium asperiores natus. Sint iure error nobis eveniet iste repudiandae eius mollitia hic saepe laudantium recusandae quod numquam earum consequatur excepturi, distinctio fugiat eaque aut eos, blanditiis porro? Ullam accusantium, exercitationem culpa, aperiam quasi consectetur magnam unde magni in distinctio libero veritatis qui delectus! Pariatur autem perferendis id velit. Natus numquam hic consequatur cupiditate molestias soluta, accusamus laudantium fuga et quo quis nostrum ipsa provident in error sint officia nulla nam tenetur odit saepe? Incidunt?
+          In this place, I'll put some things about Pomodoro and search about studies. So, now I'm write anything word just for complete 3 or 4 lines. Yes, I speak english like a Native or like your english teacher.
+        </p>
+
+        <hr>
+
+        <p>
+         Essa parte fica o Pomodoro em português. Vou adicionando coisas para aumentar o conteúdo só para saber como fica. Um homem, uma máquina, uma besta enjaulada com ódio... Cristiano Ronaldo.
         </p>
       </div>
 

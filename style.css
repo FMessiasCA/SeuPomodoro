@@ -47,7 +47,11 @@ body {
   
   height: 100vh;
   background-color: #efefef;
-} 
+}
+
+#body-2 {
+  background-color: #f6f8f8;
+}
 
 .wrapper {
   width: min(35rem, 100%);
@@ -112,6 +116,10 @@ body {
               inset 0 -4px 8px rgba(255,255,255,0.2);
 }
 
+#nav-control #openMusic.active {
+  color: var(--light);
+}
+
 #body #nav-control button#fullscreen i#screen.active {
   color: var(--light);
 }
@@ -126,6 +134,29 @@ body {
 
 footer.wrapper_2#copyright.active p {
   color: var(--light);
+}
+
+/* Music-expanded */
+
+#player #card.music-expanded {
+  display: block;
+  opacity: 1;
+}
+
+#nav-control button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+#nav-control i#openMusic {
+  color: var(--primary);
+}
+
+#nav-control i#openMusic:hover {
+  transform:scale(1.3);
+  transition: 0.5s;
 }
 
 /* *** FULL SCREEN *** */
@@ -147,12 +178,18 @@ footer.wrapper_2#copyright.active p {
   transition: 0.5s;
 }
 
+/* *** ----- *** IMPORTANT *** ----- *** */
+
+#body #important {
+  display: grid;
+  gap: 3rem;  
+}
+
 /* *** ----- *** PLAYER *** ----- *** */
 
 #player {
   background-color: var(--light);
-  width: 90%;
-  max-width: 375px;
+  max-width: 37.5rem;
   box-shadow: var(--box-shadow);
 }
 
@@ -198,29 +235,6 @@ input[type="range"]::-ms-thumb {
 .change-tracks {
   display: flex;
   justify-content: space-evenly;
-}
-
-/* Music-expanded */
-
-#player #card.music-expanded {
-  display: block;
-  opacity: 1;
-}
-
-#important button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  box-shadow: none;
-}
-
-#important i#openMusic {
-  color: var(--primary);
-}
-
-#important i#openMusic:hover {
-  transform:scale(1.3);
-  transition: 0.5s;
 }
 
 /* *** ----- *** POMODORO *** ----- *** */
@@ -309,14 +323,15 @@ input[type="range"]::-ms-thumb {
 
 /* *** ----- *** SECOND BODY *** ----- *** */
 
-#body-2 {
-  background-color: #f6f8f8;
-}
-
 /* *** ABOUT POMODORO *** */
 
 #body-2 article.about .box-text {
   position: relative;
+  margin-top: 5rem;
+
+  background-color: var(--secondary);
+  box-shadow: var(--box-shadow);
+  padding: 3.7rem 2rem 1rem;
 }
 
 #body-2 article.about h1 {
@@ -339,10 +354,14 @@ input[type="range"]::-ms-thumb {
   font-size: 1.5rem;
   text-align: justify;
   text-indent: 5rem;
-  background-color: var(--secondary);
-  box-shadow: var(--box-shadow);
-  margin-top: 5rem;
-  padding: 3.7rem 2rem 1rem;
+}
+
+#body-2 article.about hr {
+  margin: auto;
+  width: 80%;
+
+  margin-block: 1.3rem;
+  border: 1px solid var(--primary);
 }
 
 /* *** FOOTER *** */
@@ -379,16 +398,6 @@ footer.wrapper_2#copyright p, a {
 
   #body #nav-control {
     width: max(76.5%, 95rem);
-  }
-
-  #body #important {
-  margin-inline: auto;
-
-  display: flex;
-  flex-direction: row;
-  align-content: space-evenly;
-
-  gap: 3vh;
   }
 
   #body .wrapper {
