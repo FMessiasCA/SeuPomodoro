@@ -29,7 +29,6 @@
 
 <section id="body">
 
-<div class="col-a"> <!-- AAAAAAAAAA -->
 
 <div class="wrapper" id="nav-control">   
   <div id="toggle">
@@ -41,56 +40,94 @@
   </button>
 </div>
 
+
+
+
+<div id="important">
+  
 <div class="wrapper">
-  <div id="player">
-    <div class="card">
-      <div class="card-content">
-        <h5>Title</h5>
-        <p class="artist">Artist</p>
-        
-        <div class="row valign-wrapper">
-          <div class="col s2" id="current-duration">00:00</div>
-          <div class="col s6 range-field valign-wrapper">
-            <input type="range" min="0" max="0" id="seekbar" step="1" />
-          </div>
-          <div class="col s2" id="total-duration">00:00</div>
-          <div>
-            <a href="#">
-              <i class="material-icons" id="mute">volume_up</i>
-            </a>
-          </div>
-          <div class="col s3 range-field valign-wrapper">
-            <input id="vol-control" type="range" min="0" max="100" step="1" />
-          </div>
+  <!-- button open and close -->
+  <button
+  aria-expanded="false"
+  aria-label="Abrir música"
+  onclick="openMusic()"
+  >
+  <i id="openMusic" class="material-icons">music_note</i>
+  </button>
+
+<div id="player">        
+
+  <!-- Title, Artist, Duration, ETC -->
+  <div id="card">
+    <div class="card-content">
+      <h5>Title</h5>
+      <p class="artist">Artist</p>
+
+      <div class="row valign-wrapper" id="player-controls">
+        <div class="col s2" id="current-duration">00:00</div>
+        <div class="col s6 range-field valign-wrapper">
+          <input type="range" min="0" max="0" id="seekbar" step="1" />
         </div>
-
-
-
-
-        <div id="before_or_after">
+        <div class="col s2" id="total-duration">00:00</div>
+        <div>
           <a href="#">
-            <i class="material-icons" id="button_before">navigate_before</i>
-          </a>
-
-          <a href="#">
-            <i class="material-icons" id="play-pause">play_arrow</i>
-          </a>
-
-          <a href="#">
-            <i class="material-icons" id="button_after">navigate_next</i>
+            <i class="material-icons" id="volume-icon">volume_up</i>
           </a>
         </div>
-
-
-
+        <div class="col s3 range-field valign-wrapper" id="volume">
+          <input
+            type="range"
+            min="0"
+            max="100"
+            id="volume-control"
+            step="1"
+          />
+        </div>
       </div>
+    </div> <!-- card content -->
+
+
+    <!-- buttons previous, play/stop and next -->
+    <div class="change-tracks">
+      <a href="#" id="previous-track">
+        <i class="material-icons">skip_previous</i>
+      </a>
+
+      <a href="#">
+        <i class="material-icons" id="play-pause">play_arrow</i>
+      </a>
+
+      <a href="#" id="next-track">
+        <i class="material-icons">skip_next</i>
+      </a>
     </div>
-  </div>
+
+  </div> <!-- .card -->
+
+</div> <!-- #player -->
+
+
+
+  
 </div>
 
-</div> <!-- AAAAAAAAAA -->
 
-<div class="wrapper col-b">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="wrapper">
   <div id="pomodoro">
 
     <!-- <img src="../files/clock.svg" alt="clock"> -->
@@ -146,10 +183,15 @@
       <p>
         We recommend used 45 minutes to study and 10 minutes to relaxing
       </p>
-
+      <p>
+        We recommend used 45 minutes to study and 10 minutes to relaxing
+      </p>
+      
     </div>
 
 </div>
+
+</div> <!-- important -->
 
 </section>
 

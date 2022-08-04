@@ -1,48 +1,63 @@
 import audios from '../playerControlJs/data.js';
-import { secondsToMinutes } from '../playerControlJs/utils.js';
+import { path, secondsToMinutes } from '../playerControlJs/utils.js';
 import elements from '../playerControlJs/playerElements.js';
 
 export default {
   audioData: audios,
-  currentAudio : {},
-  currentPlaying : 0,
+  currentAudio: {},
+  currentPlaying: 0,
   isPlaying: false,
   start() {
     elements.get.call(this);
-
     this.update();
+    this.volumeControl.value = 100;
   },
-  play(){
+  play() {
     this.isPlaying = true;
     this.audio.play();
-    this.playPause.innerText = 'pause'
+    this.playPause.innerText = "pause";
   },
-  pause(){
+  pause() {
     this.isPlaying = false;
     this.audio.pause();
-    this.playPause.innerText = 'play_arrow';
+    this.playPause.innerText = "play_arrow";
   },
-  togglePlayPause(){
+  togglePlayPause() {
     if (this.isPlaying) {
-      this.pause()
+      this.pause();
     } else {
       this.play();
     }
   },
-  toggleMute(){
-    this.audio.muted = !this.audio.muted;
-    this.mute.innerText = this.audio.muted ? 'volume_off' : 'volume_up';
-  },
-  next(){
-    this.currentPlaying++;
-    if (this.currentPlaying === this.audioData.length) this.restart();
+  next() {
+    ++this.currentPlaying;
+
+    if (this.currentPlaying === this.audioData.length) {
+      this.currentPlaying = 0;
+    }
+    this.pause();
     this.update();
     this.play();
+  },
+  back() {
+    --this.currentPlaying;
+
+    if (this.currentPlaying === -1) {
+      this.currentPlaying = this.audioData.length - 1;
+    }
+
+    this.pause();
+    this.update();
+    this.play();
+  },
+  toggleMute() {
+    this.audio.muted = !this.audio.muted;
+    this.volume.innerHTML = this.audio.muted ? "volume_off" : "volume_up";
   },
   setVolume(value) {
     this.audio.volume = value / 100;
   },
-  setSeek(value) {
+  setSeekbar(value) {
     this.audio.currentTime = value;
   },
   timeUpdate() {
@@ -51,16 +66,14 @@ export default {
   },
   update() {
     this.currentAudio = this.audioData[this.currentPlaying];
-    this.title.innerText = this.currentAudio.title;
-    this.artist.innerHTML = `<i class='material-icons'> account_circle </i> ${this.currentAudio.artist}`;
-    elements.createAudioElement.call(this, this.currentAudio.file);
-    
+
+    this.title.innerHTML = this.currentAudio.title;
+    this.artist.innerHTML = this.currentAudio.artist;
+
+    elements.createAudioElement.call(this, path(this.currentAudio.file));
+
     this.audio.onloadeddata = () => {
       elements.actions.call(this);
     };
-  },
-  restart(){
-    this.currentPlaying = 0;
-    this.update();
   },
 };

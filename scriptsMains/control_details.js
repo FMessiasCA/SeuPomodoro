@@ -64,14 +64,25 @@ ScrollReveal(
     .box-text h1, 
     #copyright p`);
 
-/* BUTTON BEFORE AND NEXT */
-/* const before = document.getElementById('button_before'),
-      next   = document.getElementById('button_after');
 
-    before.addEventListener('click', () => {
-        console.log('before');
-    });
+/* OPEN MUSIC or CLOSE MUSIC */
 
-    next.addEventListener('onclick', () => {
-        player.start();
-    }); */
+const card = document.getElementById('card');
+const musicButton = document.getElementById('openMusic');
+
+var static = false;
+
+function openMusic() {
+  if(static == false) {
+    card.classList.add('music-expanded');
+    musicButton.innerText = "remove_circle";
+
+    static = true;
+  } else {
+    card.classList.remove('music-expanded');
+    musicButton.innerText = "music_note";
+
+    static = false;
+  }
+
+}
