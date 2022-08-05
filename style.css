@@ -69,6 +69,8 @@ body {
 #body #nav-control {
   display: flex;
   justify-content: space-between;
+  
+  margin-top: 3vh;
 }
 
 /* *** DARK AND LIGHT MODE *** */
