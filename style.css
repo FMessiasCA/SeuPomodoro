@@ -69,8 +69,6 @@ body {
 #body #nav-control {
   display: flex;
   justify-content: space-between;
-  
-  margin-top: 3vh;
 }
 
 /* *** DARK AND LIGHT MODE *** */
@@ -191,7 +189,6 @@ footer.wrapper_2#copyright.active p {
 
 #player {
   background-color: var(--light);
-  max-width: 37.5rem;
   box-shadow: var(--box-shadow);
 }
 
@@ -381,84 +378,30 @@ footer.wrapper_2#copyright p, a {
 
  @media (min-width: 1024px) {
 
-  /* *** GERAL *** */
-
- /*  body{
-    overflow: auto;
-  }
-
-  #body {
-    display: grid;
-    grid-template-columns: 1fr;
-
-    margin-inline: auto;
-    
-    place-content: center;
-    place-items: center;
-    gap: 2rem;
-  }
-
-  #body #nav-control {
-    width: max(76.5%, 95rem);
-  }
-
   #body .wrapper {
     width: min(50rem, 100%);
   }
 
-  #important #player i.material-icons {
-    color: var(--primary);
-    font-size: 3.2rem;
+  #body .wrapper #player {
+    width: min(50rem, 100%);
   }
-  
-  #important #player i.material-icons:hover {
-    transform:scale(1.5);
-    transition: 0.5s;
-  }
-
-  .card,
-  .closeMusic,
-  #player.music-expanded  .openMusic {
-  opacity: 0;
-  visibility: hidden;
-  }
-
-  #player.music-expanded,
-  #player.music-expanded .closeMusic {
-  opacity: 1;
-  visibility: visible;
-  }
-
- 
-  
-
-
-
-
-
   
   #player .card-content h5 {
     font-size: 2.3rem;
   }
-
+  
   #player .card-content p.artist {
     font-size: 1.3rem;
   }
   
   #pomodoro h1#counter {
-    padding-block: 0.5rem;
-    font-size: 7rem;
+    font-size: 6rem;
     margin: 0;
   }
 
-  #body-2 .wrapper_2 {
-    width: 60%;
-  } */
-
-
   /* *** ABOUT POMODORO *** */
 
- /*  #body-2 article.about h1 {
+  #body-2 article.about h1 {
     font-size: 2.3rem;
 
     padding: 0.7rem 5rem;
@@ -467,6 +410,5 @@ footer.wrapper_2#copyright p, a {
 
   #body-2 article.about p {
     font-size: 1.8rem;
-  } */
-
+  }
 }
