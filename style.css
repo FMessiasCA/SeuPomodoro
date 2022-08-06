@@ -43,7 +43,7 @@ body {
 #body {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   
   height: 100vh;
   background-color: #efefef;
@@ -314,10 +314,30 @@ input[type="range"]::-ms-thumb {
   width: 100%;
 }
 
-#pomodoro #sugestion p {
-  font-size: 1.3rem;
+#pomodoro button.button-expanded{
+  margin-top: 1rem;
+  padding: 0;
+  width: 100%;
+  background-color: var(--light);
+}
 
-  margin-top: 1.3rem;
+#pomodoro .button-expanded {
+  color: var(--primary);
+}
+
+#pomodoro #sugestion {
+  display: none;
+  opacity: 0;
+}
+
+#pomodoro #sugestion p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+#pomodoro #sugestion.expand_sugestion{
+  display: block;
+  opacity: 1;
 }
 
 /* *** ----- *** SECOND BODY *** ----- *** */
@@ -376,7 +396,7 @@ footer.wrapper_2#copyright p, a {
 
 /* *** ----- *** RESPONSIVE *** ----- *** */
 
- @media (min-width: 1024px) {
+ @media (min-width: 824px) {
 
   #body .wrapper {
     width: min(50rem, 100%);
@@ -393,18 +413,22 @@ footer.wrapper_2#copyright p, a {
   #player .card-content p.artist {
     font-size: 1.3rem;
   }
+
+  #body #pomodoro {
+    height: 50vh;
+  }
   
   #pomodoro h1#counter {
-    font-size: 6rem;
+    font-size: 7rem;
     margin: 0;
   }
 
   /* *** ABOUT POMODORO *** */
 
   #body-2 article.about h1 {
-    font-size: 2.3rem;
+    font-size: 2rem;
 
-    padding: 0.7rem 5rem;
+    padding: 0.7rem 3.7rem;
     top: -17px;
   }
 

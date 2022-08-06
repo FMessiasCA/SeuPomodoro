@@ -69,8 +69,8 @@ ScrollReveal(
 
 /* OPEN MUSIC or CLOSE MUSIC */
 
-const card = document.getElementById('card');
-const musicButton = document.getElementById('openMusic');
+const card = document.getElementById('card'),
+      musicButton = document.getElementById('openMusic');
 
 var static = false;
 
@@ -86,5 +86,25 @@ function openMusic() {
 
     static = false;
   }
+}
 
+/* OPEN SUGESTION or CLOSE SUGESTION */
+
+const sugestionButton = document.getElementById('expand_sugestion'),
+      sugestionText = document.getElementById('sugestion');
+
+var static2 = false;
+
+function openSugestion() {
+if(static2 == false) {
+    sugestionText.classList.add('expand_sugestion');
+    sugestionButton.innerText = "expand_less";
+
+    static2 = true;
+    } else {
+    sugestionText.classList.remove('expand_sugestion');
+    sugestionButton.innerText = "expand_more";
+
+    static2 = false;
+    }
 }
