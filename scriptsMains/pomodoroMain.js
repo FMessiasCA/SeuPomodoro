@@ -100,6 +100,7 @@ setInterval(() => {
         ringtone.play();
         ringtone.loop = true;
         pause();
+        window.navigator.vibrate(500);
     }
 });
 

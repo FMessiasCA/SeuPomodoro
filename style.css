@@ -15,7 +15,7 @@
 :root {
   font-size: 62.5%; /* 1rem = 10px */
 
-  --primary: #7159C1;
+  --primary: rgb(112, 87, 193);
   --light: #ffffff;
   --dark: #1C1C1C;
 
